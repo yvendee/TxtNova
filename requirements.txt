@@ -1,0 +1,8 @@
+certifi==2025.10.5
+charset-normalizer==3.4.3
+huawei-lte-api==1.11.0
+idna==3.11
+pycryptodomex==3.23.0
+requests==2.32.5
+urllib3==2.5.0
+xmltodict==1.0.2
