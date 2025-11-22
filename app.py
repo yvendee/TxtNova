@@ -49,12 +49,12 @@ def update_broadcast_message():
 
 
 def main():
-    # device_ip = "192.168.8.1"
-    # username = "admin"
-    # password = "admin"
+    device_ip = "192.168.8.1"
+    username = "admin"
+    password = "admin"
 
-    # lte = HuaweiLte(device_ip, username, password)
-    # lte.connect()
+    lte = HuaweiLte(device_ip, username, password)
+    lte.connect()
 
     while True:
         # Step 1: Check for broadcast message
@@ -72,10 +72,10 @@ def main():
 
             # Step 3: Send broadcast message to each mobile number with 1-second delay
             for number in valid_numbers:
-                # if lte.send_sms(number, broadcast_message):
-                #     print(f"SMS sent successfully to {number}")
-                # else:
-                #     print(f"Failed to send SMS to {number}")
+                if lte.send_sms(number, broadcast_message):
+                    print(f"SMS sent successfully to {number}")
+                else:
+                    print(f"Failed to send SMS to {number}")
 
                 print(f"SMS sent successfully to {number}")
                 time.sleep(1)  # 1-second delay between each message
@@ -96,3 +96,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
